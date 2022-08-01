@@ -1,0 +1,270 @@
+@import "animations.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Outfit:wght@100;200;300;400;500;600&display=swap');
+*{
+    font-family: Outfit, sans-serif;
+}
+@font-face {
+    font-family: 'Outfit';
+}
+html {
+    font-family: 'Outfit', 'Roboto', sans-serif;
+    font-size: 0.6rem;
+    color: #515151;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+img {
+    width: 100%;
+}
+
+small {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+section {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+}
+.hline{
+    max-width: 5.62rem;
+    height: 1px;
+    background: rgba(66, 86, 58, 0.6);
+    margin: 0.3rem auto 0 auto;
+}
+nav{
+
+}
+.nav-list{
+    border-top: black 1px solid;
+    padding: 2rem;
+    justify-content: space-around;
+    width: 85%;
+}
+
+.navbar-toggler-icon{
+    border: none;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    transition: color .5s;
+    margin-left: 0.6rem;
+}
+
+.nav-link:hover{
+    color: #040D33;
+}
+.primary-logo-section{
+    width: 100%;
+}
+.primary-logo-section img{
+    width: 13.75rem;
+    height: auto;
+    margin-left: 9rem;
+}
+@media(max-width: 767px){
+    .primary-logo-section img{
+        margin-left: auto;
+    }
+}
+/*slider*/
+.home .carousel-item{
+    min-height: 90vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.home .carousel-item:before{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.home .carousel-item .container{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.home .carousel-item h5{
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin:0 0 0.6rem;
+    opacity: 0;
+}
+.home .carousel-item p{
+    font-size: 1.8rem;
+    margin:0;
+    color: #eeeeee;
+    opacity:0;
+}
+.home .carousel-item.active h5{
+    animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+    animation: fadeInRight 0.5s ease forwards;
+}
+
+
+.home .carousel-controls{
+    position: absolute;
+    left: 50%;
+    bottom: 2.5rem;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.home .carousel-indicators{
+    position: relative;
+    margin:0;
+}
+
+.home .carousel-indicators li{
+    height: 4.5rem;
+    width: 4.5rem;
+    margin:0 1.2rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border:3px solid transparent;
+    transition: all 0.3s ease;
+}
+.home .carousel-indicators li.active{
+    border-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.section-name{
+    color: #00a2d1;
+}
+.section-intro{
+    text-align: center;
+    margin-bottom: 3.75rem;
+    text-transform: uppercase;
+}
+.section-intro .hline{
+    max-width: 4.37rem;
+    height: 2px;
+    background: black;
+    margin: 0.8rem auto 0 auto;
+}
+.form-control{
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+.cta-btn {
+    font-size: 1.1rem;
+    background-color: #00a2d1;
+    padding: .9rem 1.8rem;
+    color: black;
+    border-radius: .4rem;
+    transition: background-color .5s;
+}
+.cta-btn:hover,
+.cta-btn:focus {
+    color: lightgray;
+    background-color: gray;
+}
+.btn-form2 a{
+    width: 100%;
+}
+#footer{
+    border-top: 1px solid white;
+}
+#footer h4{
+    color: #00a2d1;
+}
+.footer-top{
+    padding-top: 5rem;
+    padding-bottom: 1.8rem;
+}
+.social-icons{
+    transition: all 0.4s ease;
+    width: 100%;
+    height: 3.75rem;
+}
+.social-icons a{
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+}
+footer .footer-links a{
+    padding: 0.4rem;
+    display: block;
+    color: white;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+footer .footer-links a:hover, .social-icons a:hover{
+    transition: all .4s ease;
+    color: gray;
+}
+.footer-top .container .row .col-md-2 p{
+    font-size: 1.4rem;
+}
+.footer-bottom{
+    border-top: gray 0.8px solid;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+.footer-bottom p{
+    color: gray;
+    font-size: 1.2rem;
+}
+.logo{
+    width: 8.9rem;
+    height: 6.8rem;
+    margin-bottom: 8rem;
+}
+#products .row .info{
+    color: black;
+    font-size: 2.3rem;
+    width: 50%;
+    margin-bottom: 7rem;
+}
+#products .card{
+    width: 32rem;
+}
+#products .card .card-title{
+    font-size: 1.3rem;
+}
+.section-bg{
+    background: url("../img/bg/bACKGROUND.jpg") no-repeat center center;
+    height: 40vh;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+footer{
+    background: #040D33;
+}
+.contact{
+    background: #040D33;
+}
+#about p{
+    font-size: 1.5rem;
+}
